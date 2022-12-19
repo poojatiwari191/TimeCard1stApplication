@@ -19,7 +19,7 @@
       let selected = (i === month_selected ? ' selected' : '');
       option += '<option value="' + month + '"' + selected + '>' + months[i] + '</option>';
   }
-  document.getElementById("month").innerHTML = 'option';
+  document.getElementById("month").innerHTML = option;
 })();
 
 
@@ -29,22 +29,20 @@
 
 
 (function () {
-    let year_satart = 2021;
-    let year_end = (new Date).getFullYear(); // current year
-    let year_selected = 2022;
+  let year_satart = 1940;
+  let year_end = (new Date).getFullYear(); // current year
+  let year_selected = 1992;
 
-    let option = '';
-    option = '<option>Year</option>'; // first option
+  let option = '';
+  option = '<option>Year</option>'; // first option
 
-    for (let i = year_satart; i <= year_end; i++) {
-        let selected = (i === year_selected ? ' selected' : '');
-        option += '<option value="' + i + '"' + selected + '>' + i + '</option>';
-    }
+  for (let i = year_satart; i <= year_end; i++) {
+      let selected = (i === year_selected ? ' selected' : '');
+      option += '<option value="' + i + '"' + selected + '>' + i + '</option>';
+  }
 
-    document.getElementById("year").innerHTML = 'option';
-}
-
-)();
+  document.getElementById("year").innerHTML = option;
+})();
 
 
 
